@@ -2,4 +2,8 @@
 
 ## Project Overview
 
-- Practising webpack and DOM manipulation using JavaScript.
+- Messing around with webpack.
+
+# Credits
+
+- https://www.flaticon.com/free-icons/pokemon

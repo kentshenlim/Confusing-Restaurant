@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+}
+
+.flex-horizontal {
+  display: flex;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title component styling----------------------------------------------------*/
+.title-wrapper {
+  border: solid red 3px;
+  width: 80%;
+}
