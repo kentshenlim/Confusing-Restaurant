@@ -3,6 +3,11 @@
   src: url(./assets/font/Pangolin-Regular.ttf);
 }
 
+@font-face {
+  font-family: infant;
+  src: url(./assets/font/YsabeauInfant-VariableFont_wght.ttf);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -31,12 +36,8 @@
   justify-content: space-between;
   font-family: pangolin;
   font-size: 2rem;
-  color: #b09696;
-}
-
-.title-wrapper a {
-  text-decoration: none;
-  color: #b09696;
+  color: #aeaeae;
+  letter-spacing: 0.5rem;
 }
 
 .title-wrapper::before,
@@ -52,10 +53,10 @@
 
 .title-wrapper::before {
   top: 0;
-  background-color: #f0f0f0;
+  background-color: #fafafa;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0px 0px 20px#f0f0f0;
+  box-shadow: 0px 0px 20px #fafafa;
 }
 
 .title-wrapper::after {
@@ -63,7 +64,7 @@
   background-color: #e85350;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  box-shadow: 0px 0px 5px #e85350;
+  box-shadow: 0px 0px 3px #e85350;
 }
 
 .title-wrapper img {
@@ -73,4 +74,39 @@
 
 .title-wrapper img:hover {
   transform: rotate(360deg);
+}
+
+/* Pallet component styling---------------------------------------------------*/
+.pallet-wrapper {
+  border: solid red 3px;
+  width: 60%;
+  font-family: Infant;
+}
+
+.pallet-wrapper > * {
+  border: solid green 3px;
+  margin: 0;
+}
+
+.pallet-wrapper h2 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.pallet-wrapper > :nth-child(2) {
+  align-self: center;
+  font-size: 1.2rem;
+}
+
+/* Hours styling -------------------------------------------------------------*/
+.pallet-wrapper.hours {
+  color: blue;
+}
+
+.pallet-wrapper.hours ul {
+  padding: 0;
+}
+
+.pallet-wrapper.hours li {
+  list-style: none;
 }

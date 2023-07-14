@@ -14,11 +14,7 @@ export default (() => {
 
     // Text element
     const text = document.createElement('h1');
-    const anchor = document.createElement('a');
-    anchor.textContent = titleText;
-    anchor.href = 'https://www.pokemoncenter-online.com/cafe/en/';
-    anchor.setAttribute('target', '_blank');
-    text.appendChild(anchor);
+    text.textContent = titleText;
 
     // Two pokeballs
     const ballOne = createBallNode();
