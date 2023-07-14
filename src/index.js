@@ -6,5 +6,5 @@ const test = document.createElement('p');
 const body = document.querySelector('body');
 test.textContent = '123';
 body.appendChild(test);
-body.append(Title('tstd'));
+body.append(Title('PokéBités Café'));
 Home();
