@@ -13,14 +13,16 @@ export default function Home() {
 
   // Opening hours
   const hourData = {
-    Mon: ['0900', '1700'],
-    Tues: ['0900', '1700'],
-    Wed: ['0900', '1700'],
-    Thur: ['0900', '1700'],
-    Fri: ['0900', '1700'],
+    Mon: ['1200', '2100'],
+    Tues: ['1200', '2100'],
+    Wed: ['1200', '1800'],
+    Thur: ['1100', '1930'],
+    Fri: ['1200', '2100'],
+    Sat: ['0900', '2300'],
   };
   function createTime(timeData) {
     const timeWrapper = document.createElement('div');
+    timeWrapper.classList.add('flex-horizontal');
     const days = Object.keys(timeData);
     for (let i = 0; i < days.length; i += 1) {
       const [s, e] = hourData[days[i]];

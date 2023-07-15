@@ -112,7 +112,7 @@ img.shake:hover {
 }
 
 .pallet-wrapper > * {
-  margin: 0;
+  margin: 1rem;
 }
 
 .pallet-wrapper h2 {
@@ -124,6 +124,33 @@ img.shake:hover {
 .pallet-wrapper > :nth-child(2) {
   align-self: center;
   font-size: 1.2rem;
+}
+
+/* Day component styling -----------------------------------------------------*/
+.day-wrapper {
+  border: solid #6f487047 3px;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+  flex-grow: 1;
+  border-radius: 1rem;
+  background-color: #6f487047;
+}
+
+.day-wrapper > * {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.day-wrapper > *:last-child::before {
+  content: '→';
+}
+
+.day-wrapper:hover {
+  background-color: #6f487091;
+  cursor: pointer;
 }
 
 /* Hours styling -------------------------------------------------------------*/
@@ -143,4 +170,10 @@ img.shake:hover {
   margin: 0 auto;
   gap: 1rem;
   padding-top: 1rem;
+}
+
+.home-wrapper .hours > :nth-child(2) {
+  flex-flow: wrap;
+  gap: 1%;
+  width: 90%;
 }
