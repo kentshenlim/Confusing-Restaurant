@@ -127,13 +127,19 @@ img.shake:hover {
 }
 
 /* Hours styling -------------------------------------------------------------*/
-.pallet-wrapper.hours {
-}
-
 .pallet-wrapper.hours ul {
   padding: 0;
 }
 
 .pallet-wrapper.hours li {
   list-style: none;
+}
+
+/* Home page styling ---------------------------------------------------------*/
+.home-wrapper {
+  width: 70%;
+  align-items: center;
+  border: solid red 3px;
+  margin: 0 auto;
+  gap: 1rem;
 }
