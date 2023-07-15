@@ -1,5 +1,11 @@
 export default (() => {
-  function createPallet(palletTitle, titleBall, contentNode, className) {
+  function createPallet(
+    palletTitle,
+    titleBall,
+    titleBackgroundClass,
+    contentNode,
+    className,
+  ) {
     // Main element
     const palletWrapper = document.createElement('div');
     palletWrapper.classList.add('pallet-wrapper', 'flex-vertical', className);
@@ -15,7 +21,7 @@ export default (() => {
 
     // Title wrapper
     const titleWrapper = document.createElement('div');
-    titleWrapper.classList.add('flex-horizontal');
+    titleWrapper.classList.add('flex-horizontal', titleBackgroundClass);
     titleWrapper.append(ball);
     titleWrapper.append(title);
     palletWrapper.append(titleWrapper);

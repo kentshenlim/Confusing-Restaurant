@@ -1,5 +1,5 @@
-import Home from './modules/home';
 import './style.css';
+import './background.css';
 import Title from './components/Title';
 import Pallet from './components/Pallet';
 import testball from './assets/img/timerBall.png';
@@ -28,5 +28,4 @@ function createTime() {
   return ul;
 }
 
-body.append(Pallet('Hours', testball, createTime(), 'hours'));
-Home();
+body.append(Pallet('Hours', testball, 'background-zigzag', createTime(), 'hours'));
