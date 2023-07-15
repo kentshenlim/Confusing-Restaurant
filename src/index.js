@@ -2,6 +2,7 @@ import Home from './modules/home';
 import './style.css';
 import Title from './components/Title';
 import Pallet from './components/Pallet';
+import testball from './assets/img/timerBall.png';
 
 const test = document.createElement('p');
 const body = document.querySelector('body');
@@ -27,5 +28,5 @@ function createTime() {
   return ul;
 }
 
-body.append(Pallet('Hours', createTime(), 'hours'));
+body.append(Pallet('Hours', testball, createTime(), 'hours'));
 Home();
