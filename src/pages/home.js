@@ -2,6 +2,7 @@ import Title from '../components/Title';
 import Pallet from '../components/Pallet';
 import Day from '../components/Day';
 import timerBall from '../assets/img/timerBall.png';
+import safariBall from '../assets/img/safariBall.png';
 
 export default function Home() {
   // Home wrapper
@@ -38,9 +39,27 @@ export default function Home() {
     'hours',
   );
 
+  // Location
+  function createLocation() {
+    const locationWrapper = document.createElement('div');
+    locationWrapper.classList.add('flex-vertical');
+    const locationText = document.createElement('h3');
+    locationText.textContent = 'Mirage Island (near Sky Pillar), Route 130, Hoenn';
+    locationWrapper.appendChild(locationText);
+    return locationWrapper;
+  }
+  const locationNode = Pallet(
+    'Location',
+    safariBall,
+    'background-isometric',
+    createLocation(),
+    'hours',
+  );
+
   // Append elements
   homeWrapper.appendChild(titleNode);
   homeWrapper.appendChild(hourNode);
+  homeWrapper.appendChild(locationNode);
 
   return homeWrapper;
 }
