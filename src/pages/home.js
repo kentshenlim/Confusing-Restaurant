@@ -1,5 +1,6 @@
 import Title from '../components/Title';
 import Pallet from '../components/Pallet';
+import Day from '../components/Day';
 import timerBall from '../assets/img/timerBall.png';
 
 export default function Home() {
@@ -11,30 +12,31 @@ export default function Home() {
   const titleNode = Title('PokéBités Café');
 
   // Opening hours
-  function createListItem(text) {
-    const li = document.createElement('li');
-    li.textContent = text;
-    return li;
-  }
-  function createTime() {
-    const ul = document.createElement('ul');
-    ul.appendChild(createListItem('Sunday: 8am - 8pm'));
-    ul.appendChild(createListItem('Monday: 8am - 8pm'));
-    ul.appendChild(createListItem('Sunday: 8am - 8pm'));
-    ul.appendChild(createListItem('Sunday: 8am - 8pm'));
-    ul.appendChild(createListItem('Sunday: 8am - 8pm'));
-    ul.appendChild(createListItem('Sunday: 8am - 8pm'));
-    ul.appendChild(createListItem('Sunday: 8am - 8pm'));
-    return ul;
+  const hourData = {
+    Mon: ['0900', '1700'],
+    Tues: ['0900', '1700'],
+    Wed: ['0900', '1700'],
+    Thur: ['0900', '1700'],
+    Fri: ['0900', '1700'],
+  };
+  function createTime(timeData) {
+    const timeWrapper = document.createElement('div');
+    const days = Object.keys(timeData);
+    for (let i = 0; i < days.length; i += 1) {
+      const [s, e] = hourData[days[i]];
+      timeWrapper.appendChild(Day(days[i], s, e));
+    }
+    return timeWrapper;
   }
   const hourNode = Pallet(
-    'Hours',
+    'Opening Hours',
     timerBall,
     'background-zigzag',
-    createTime(),
+    createTime(hourData),
     'hours',
   );
 
+  // Append elements
   homeWrapper.appendChild(titleNode);
   homeWrapper.appendChild(hourNode);
 
