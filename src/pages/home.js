@@ -1,8 +1,10 @@
 import Title from '../components/Title';
 import Pallet from '../components/Pallet';
 import Day from '../components/Day';
+import Review from '../components/Review';
 import timerBall from '../assets/img/timerBall.png';
 import safariBall from '../assets/img/safariBall.png';
+import loveBall from '../assets/img/loveBall.png';
 
 export default function Home() {
   // Home wrapper
@@ -56,10 +58,26 @@ export default function Home() {
     'hours',
   );
 
+  // Review
+  function createReview() {
+    const reviewWrapper = document.createElement('div');
+    reviewWrapper.classList.add('flex-vertical');
+    reviewWrapper.appendChild(Review('Jordan Ramsay', 'I like this'));
+    return reviewWrapper;
+  }
+  const reviewNode = Pallet(
+    'Review',
+    loveBall,
+    'background-rectangle',
+    createReview(),
+    'hours',
+  );
+
   // Append elements
   homeWrapper.appendChild(titleNode);
   homeWrapper.appendChild(hourNode);
   homeWrapper.appendChild(locationNode);
+  homeWrapper.appendChild(reviewNode);
 
   return homeWrapper;
 }
