@@ -15,7 +15,7 @@ export default function Home() {
   // Title
   const titleNode = Title('PokéBités Café');
 
-  // Opening hours
+  // Hours
   const hourData = {
     Mon: ['1200', '2100'],
     Tues: ['1200', '2100'],
@@ -24,7 +24,7 @@ export default function Home() {
     Fri: ['1200', '2100'],
     Sat: ['0900', '2300'],
   };
-  function createTime(timeData) {
+  function createTimeBodyNode(timeData) {
     const timeWrapper = document.createElement('div');
     timeWrapper.classList.add('flex-horizontal');
     const days = Object.keys(timeData);
@@ -38,28 +38,29 @@ export default function Home() {
     'Opening Hours',
     timerBall,
     'background-zigzag',
-    createTime(hourData),
+    createTimeBodyNode(hourData),
     'hours',
   );
 
   // Location
-  function createLocation() {
+  function createLocation(locationText, imgSrc) {
     const locationWrapper = document.createElement('div');
     locationWrapper.classList.add('flex-vertical');
-    const locationText = document.createElement('h3');
-    locationText.textContent = 'Mirage Island (near Sky Pillar), Route 130, Hoenn';
-    locationWrapper.appendChild(locationText);
-    const locationImg = document.createElement('img');
-    locationImg.src = locationRestaurant;
-    locationWrapper.appendChild(locationImg);
+    const textNode = document.createElement('h3');
+    textNode.textContent = locationText;
+    locationWrapper.appendChild(textNode);
+    const imgNode = document.createElement('img');
+    imgNode.src = imgSrc;
+    imgNode.classList.add('img-round-corner');
+    locationWrapper.appendChild(imgNode);
     return locationWrapper;
   }
   const locationNode = Pallet(
     'Location',
     safariBall,
     'background-isometric',
-    createLocation(),
-    'hours',
+    createLocation('Mirage Island (near Sky Pillar), Route 130, Hoenn', locationRestaurant),
+    'location',
   );
 
   // Review

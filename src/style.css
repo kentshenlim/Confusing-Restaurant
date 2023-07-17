@@ -27,6 +27,10 @@
   flex-direction: column;
 }
 
+.img-round-corner {
+  border-radius: 1rem;
+}
+
 img.shake:hover {
   animation: shake 1s;
   animation-iteration-count: infinite;
@@ -160,14 +164,23 @@ img.shake:hover {
   width: 70%;
   min-width: 800px;
   align-items: center;
-  border: solid red 3px;
   margin: 0 auto;
   gap: 1rem;
   padding-top: 1rem;
 }
 
-.home-wrapper .hours > :nth-child(2) {
+.home-wrapper > .hours > :nth-child(2) {
   flex-flow: wrap;
   gap: 1%;
   width: 90%;
+}
+
+.home-wrapper > .location > :nth-child(2) {
+  width: 90%;
+}
+
+.home-wrapper > .location > :nth-child(2) img {
+  box-shadow: 0px 0px 30px rgb(61, 123, 128);
+  width: 80%;
+  margin: 0 auto;
 }
