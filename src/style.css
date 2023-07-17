@@ -16,6 +16,10 @@
   width: 100vw;
 }
 
+body {
+  background-image: url(../src/assets/img/backgroundP2.png);
+}
+
 /* Predefined class ----------------------------------------------------------*/
 .flex-horizontal {
   display: flex;
@@ -190,7 +194,12 @@ img.shake:hover {
   margin: 0 auto;
   gap: 1rem;
   padding-top: 1rem;
-  background-color: #9a727217;
+  background-color: #aa9b7bc7;
+  border-radius: 1rem;
+}
+
+.page > :first-child {
+  z-index: 1;
 }
 
 /* Pages: Home ---------------------------------------------------------------*/
