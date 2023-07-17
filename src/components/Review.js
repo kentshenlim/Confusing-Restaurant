@@ -1,12 +1,18 @@
-export default function Review(person, quote, photo) {
+export default function Review(person, imgSrc, review) {
   const reviewWrapper = document.createElement('div');
-  reviewWrapper.classList.add('review-wrapper');
+  reviewWrapper.classList.add('review-wrapper', 'flex-horizontal');
 
-  const personNode = document.createElement('h3');
-  personNode.textContent = person;
+  const personNode = document.createElement('div');
+  personNode.classList.add('flex-vertical');
+  const personName = document.createElement('h3');
+  personName.textContent = person;
+  const personImg = document.createElement('img');
+  personImg.src = imgSrc;
+  personImg.classList.add('img-round-corner');
+  personNode.append(...[personName, personImg]);
 
   const quoteNode = document.createElement('blockquote');
-  quoteNode.textContent = quote;
+  quoteNode.textContent = review;
 
   reviewWrapper.appendChild(personNode);
   reviewWrapper.appendChild(quoteNode);

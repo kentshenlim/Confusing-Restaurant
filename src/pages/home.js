@@ -6,6 +6,8 @@ import timerBall from '../assets/img/timerBall.png';
 import safariBall from '../assets/img/safariBall.png';
 import loveBall from '../assets/img/loveBall.png';
 import locationRestaurant from '../assets/img/locationRestaurant.png';
+import stevenStone from '../assets/img/stevenStone.png';
+import mayBirch from '../assets/img/mayBirch.png';
 
 export default function Home() {
   // Home wrapper
@@ -64,18 +66,25 @@ export default function Home() {
   );
 
   // Review
-  function createReview() {
+  const reviewData = [
+    { name: 'Steven Stone', imgSrc: stevenStone, reviewText: 'I like this' },
+    { name: 'May Birch', imgSrc: mayBirch, reviewText: 'I like this' },
+  ];
+  function createReview(arr) {
     const reviewWrapper = document.createElement('div');
     reviewWrapper.classList.add('flex-vertical');
-    reviewWrapper.appendChild(Review('Jordan Ramsay', 'I like this'));
+    arr.forEach((obj) => {
+      const { name, imgSrc, reviewText } = obj;
+      reviewWrapper.appendChild(Review(name, imgSrc, reviewText));
+    });
     return reviewWrapper;
   }
   const reviewNode = Pallet(
     'Review',
     loveBall,
     'background-rectangle',
-    createReview(),
-    'hours',
+    createReview(reviewData),
+    'review',
   );
 
   // Append elements
