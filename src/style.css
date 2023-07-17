@@ -182,9 +182,8 @@ img.shake:hover {
   content: '"';
 }
 
-/* Pages: Home ---------------------------------------------------------------*/
-/* Might be generic for pages, KIV */
-.home-wrapper {
+/* Pages: general styling ----------------------------------------------------*/
+.page {
   width: 70%;
   min-width: 800px;
   align-items: center;
@@ -193,11 +192,12 @@ img.shake:hover {
   padding-top: 1rem;
 }
 
+/* Pages: Home ---------------------------------------------------------------*/
 .home-wrapper .about {
   align-items: center;
 }
 
-.home-wrapper .about > :nth-child(2) {
+.home-wrapper > :not(:first-child) > :nth-child(2) {
   width: 90%;
 }
 
@@ -209,19 +209,10 @@ img.shake:hover {
 .home-wrapper > .hours > :nth-child(2) {
   flex-flow: wrap;
   gap: 1%;
-  width: 90%;
-}
-
-.home-wrapper > .location > :nth-child(2) {
-  width: 90%;
 }
 
 .home-wrapper > .location > :nth-child(2) img {
   box-shadow: 0px 0px 30px rgb(61, 123, 128);
   width: 80%;
   margin: 0 auto;
-}
-
-.home-wrapper > .review > :nth-child(2) {
-  width: 90%;
 }

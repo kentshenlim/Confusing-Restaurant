@@ -14,7 +14,7 @@ import mayBirch from '../assets/img/mayBirch.png';
 export default function Home() {
   // Home wrapper
   const homeWrapper = document.createElement('div');
-  homeWrapper.classList.add('home-wrapper', 'flex-vertical');
+  homeWrapper.classList.add('page', 'home-wrapper', 'flex-vertical');
 
   // About
   function createAboutBodyNode(imgSrc, aboutText) {
