@@ -67,8 +67,16 @@ export default function Home() {
 
   // Review
   const reviewData = [
-    { name: 'Steven Stone', imgSrc: stevenStone, reviewText: 'I like this' },
-    { name: 'May Birch', imgSrc: mayBirch, reviewText: 'I like this' },
+    {
+      name: 'Steven Stone, League Champion',
+      imgSrc: stevenStone,
+      reviewText: "When I first heard about a restaurant located on a mirage island, I couldn't help but be intrigued. Skepticism mixed with curiosity as I set foot on this mystical oasis, unsure of what to expect. But from the moment I stepped inside, my doubts were shattered, and I was transported into a world of culinary delight.",
+    },
+    {
+      name: 'May Birch, Professional Trainer',
+      imgSrc: mayBirch,
+      reviewText: "While dining at Mirage Island comes with a premium price tag, it is worth every penny. This is not just a restaurant; it is an escape from reality, an immersive journey for your taste buds and soul. Whether you're seeking a romantic dinner under the stars or a unique culinary adventure, Mirage Island delivers beyond expectations.",
+    },
   ];
   function createReview(arr) {
     const reviewWrapper = document.createElement('div');

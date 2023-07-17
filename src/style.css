@@ -161,6 +161,9 @@ img.shake:hover {
 /* Component: Review ---------------------------------------------------------*/
 .review-wrapper {
   width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: solid #b4a5a567 3px;
+  justify-content: space-around;
 }
 
 .review-wrapper > :first-child {
@@ -169,7 +172,9 @@ img.shake:hover {
 }
 
 .review-wrapper > :nth-child(2) {
-  border: solid green 3px;
+  width: 55%;
+  margin: 0;
+  align-self: flex-end;
 }
 
 /* Pages: Home ---------------------------------------------------------------*/
@@ -197,10 +202,6 @@ img.shake:hover {
   box-shadow: 0px 0px 30px rgb(61, 123, 128);
   width: 80%;
   margin: 0 auto;
-}
-
-.review {
-  border: solid green 3px;
 }
 
 .home-wrapper > .review > :nth-child(2) {
