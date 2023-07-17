@@ -11,9 +11,7 @@ export default function Day(day, open, close) {
   const closeNode = document.createElement('p');
   closeNode.textContent = close;
 
-  dayWrapper.appendChild(dayNode);
-  dayWrapper.appendChild(openNode);
-  dayWrapper.appendChild(closeNode);
+  dayWrapper.append(...[dayNode, openNode, closeNode]);
 
   return dayWrapper;
 }

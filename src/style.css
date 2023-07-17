@@ -177,6 +177,11 @@ img.shake:hover {
   align-self: flex-end;
 }
 
+.review-wrapper > :nth-child(2)::before,
+.review-wrapper > :nth-child(2)::after {
+  content: '"';
+}
+
 /* Pages: Home ---------------------------------------------------------------*/
 /* Might be generic for pages, KIV */
 .home-wrapper {

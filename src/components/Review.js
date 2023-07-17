@@ -14,8 +14,7 @@ export default function Review(person, imgSrc, review) {
   const quoteNode = document.createElement('blockquote');
   quoteNode.textContent = review;
 
-  reviewWrapper.appendChild(personNode);
-  reviewWrapper.appendChild(quoteNode);
+  reviewWrapper.append(...[personNode, quoteNode]);
 
   return reviewWrapper;
 }

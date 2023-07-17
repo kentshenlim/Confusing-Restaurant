@@ -21,9 +21,7 @@ export default (() => {
     const ballTwo = createBallNode();
 
     // Append
-    titleWrapper.appendChild(ballOne);
-    titleWrapper.appendChild(text);
-    titleWrapper.appendChild(ballTwo);
+    titleWrapper.append(...[ballOne, text, ballTwo]);
 
     return titleWrapper;
   }

@@ -21,8 +21,7 @@ export default function createPallet(
   // Title wrapper
   const titleWrapper = document.createElement('div');
   titleWrapper.classList.add('flex-horizontal', titleBackgroundClass);
-  titleWrapper.append(ball);
-  titleWrapper.append(title);
+  titleWrapper.append(...[ball, title]);
   palletWrapper.append(titleWrapper);
 
   // Content node

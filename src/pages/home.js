@@ -96,10 +96,7 @@ export default function Home() {
   );
 
   // Append elements
-  homeWrapper.appendChild(titleNode);
-  homeWrapper.appendChild(hourNode);
-  homeWrapper.appendChild(locationNode);
-  homeWrapper.appendChild(reviewNode);
+  homeWrapper.append(...[titleNode, hourNode, locationNode, reviewNode]);
 
   return homeWrapper;
 }
