@@ -2,9 +2,11 @@ import Title from '../components/Title';
 import Pallet from '../components/Pallet';
 import Day from '../components/Day';
 import Review from '../components/Review';
+import guide from '../assets/img/guide.png';
 import timerBall from '../assets/img/timerBall.png';
 import safariBall from '../assets/img/safariBall.png';
 import loveBall from '../assets/img/loveBall.png';
+import aboutRestaurant from '../assets/img/aboutRestaurant.png';
 import locationRestaurant from '../assets/img/locationRestaurant.png';
 import stevenStone from '../assets/img/stevenStone.png';
 import mayBirch from '../assets/img/mayBirch.png';
@@ -13,6 +15,28 @@ export default function Home() {
   // Home wrapper
   const homeWrapper = document.createElement('div');
   homeWrapper.classList.add('home-wrapper', 'flex-vertical');
+
+  // About
+  function createAboutBodyNode(imgSrc, aboutText) {
+    const aboutWrapper = document.createElement('div');
+    const imgNode = document.createElement('img');
+    imgNode.classList.add('img-round-corner');
+    imgNode.src = imgSrc;
+    const textNode = document.createElement('h3');
+    textNode.textContent = aboutText;
+    aboutWrapper.append(...[imgNode, textNode]);
+    return aboutWrapper;
+  }
+  const aboutNode = Pallet(
+    'About',
+    guide,
+    's',
+    createAboutBodyNode(
+      aboutRestaurant,
+      'At Mirage Island, we invite you to embark on a journey like no other, where the boundaries between fantasy and reality blur, and your senses are awakened to a world of culinary enchantment. Nestled on a mirage island, a hidden oasis seemingly born from the dreams of wanderers, our restaurant is a testament to the magic that can unfold when imagination meets exquisite cuisine.',
+    ),
+    'about',
+  );
 
   // Title
   const titleNode = Title('PokéBités Café');
@@ -45,7 +69,7 @@ export default function Home() {
   );
 
   // Location
-  function createLocation(locationText, imgSrc) {
+  function createLocationBodyNode(locationText, imgSrc) {
     const locationWrapper = document.createElement('div');
     locationWrapper.classList.add('flex-vertical');
     const textNode = document.createElement('h3');
@@ -61,7 +85,7 @@ export default function Home() {
     'Location',
     safariBall,
     'background-isometric',
-    createLocation('Mirage Island (near Sky Pillar), Route 130, Hoenn', locationRestaurant),
+    createLocationBodyNode('Mirage Island (near Sky Pillar), Route 130, Hoenn', locationRestaurant),
     'location',
   );
 
@@ -78,7 +102,7 @@ export default function Home() {
       reviewText: "While dining at Mirage Island comes with a premium price tag, it is worth every penny. This is not just a restaurant; it is an escape from reality, an immersive journey for your taste buds and soul. Whether you're seeking a romantic dinner under the stars or a unique culinary adventure, Mirage Island delivers beyond expectations.",
     },
   ];
-  function createReview(arr) {
+  function createReviewBodyNode(arr) {
     const reviewWrapper = document.createElement('div');
     reviewWrapper.classList.add('flex-vertical');
     arr.forEach((obj) => {
@@ -91,12 +115,12 @@ export default function Home() {
     'Review',
     loveBall,
     'background-rectangle',
-    createReview(reviewData),
+    createReviewBodyNode(reviewData),
     'review',
   );
 
   // Append elements
-  homeWrapper.append(...[titleNode, hourNode, locationNode, reviewNode]);
+  homeWrapper.append(...[titleNode, aboutNode, hourNode, locationNode, reviewNode]);
 
   return homeWrapper;
 }

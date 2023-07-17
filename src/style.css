@@ -193,6 +193,19 @@ img.shake:hover {
   padding-top: 1rem;
 }
 
+.home-wrapper .about {
+  align-items: center;
+}
+
+.home-wrapper .about > :nth-child(2) {
+  width: 90%;
+}
+
+.home-wrapper .about > :nth-child(2) > img {
+  width: 100%;
+  box-shadow: 0px 0px 30px rgb(61, 123, 128);
+}
+
 .home-wrapper > .hours > :nth-child(2) {
   flex-flow: wrap;
   gap: 1%;
