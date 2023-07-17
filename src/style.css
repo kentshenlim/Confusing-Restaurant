@@ -16,6 +16,7 @@
   width: 100vw;
 }
 
+/* Predefined class ----------------------------------------------------------*/
 .flex-horizontal {
   display: flex;
   align-items: center;
@@ -44,7 +45,7 @@ img.shake:hover {
   }
 }
 
-/* Title component styling----------------------------------------------------*/
+/* Component: Title ----------------------------------------------------------*/
 .title-wrapper {
   position: relative;
   width: 80%;
@@ -93,7 +94,7 @@ img.shake:hover {
   transform: rotate(360deg);
 }
 
-/* Pallet component styling---------------------------------------------------*/
+/* Component: Pallet ---------------------------------------------------------*/
 .pallet-wrapper {
   width: 60%;
   font-family: Infant;
@@ -126,7 +127,7 @@ img.shake:hover {
   font-size: 1.2rem;
 }
 
-/* Day component styling -----------------------------------------------------*/
+/* Component: Day ------------------------------------------------------------*/
 .day-wrapper {
   border: solid #6f487047 3px;
   width: 15%;
@@ -153,7 +154,8 @@ img.shake:hover {
   cursor: pointer;
 }
 
-/* Home page styling ---------------------------------------------------------*/
+/* Pages: Home ---------------------------------------------------------------*/
+/* Might be generic for pages, KIV */
 .home-wrapper {
   width: 70%;
   min-width: 800px;

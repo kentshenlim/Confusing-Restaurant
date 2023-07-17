@@ -5,6 +5,7 @@ import Review from '../components/Review';
 import timerBall from '../assets/img/timerBall.png';
 import safariBall from '../assets/img/safariBall.png';
 import loveBall from '../assets/img/loveBall.png';
+import locationRestaurant from '../assets/img/locationRestaurant.png';
 
 export default function Home() {
   // Home wrapper
@@ -48,6 +49,9 @@ export default function Home() {
     const locationText = document.createElement('h3');
     locationText.textContent = 'Mirage Island (near Sky Pillar), Route 130, Hoenn';
     locationWrapper.appendChild(locationText);
+    const locationImg = document.createElement('img');
+    locationImg.src = locationRestaurant;
+    locationWrapper.appendChild(locationImg);
     return locationWrapper;
   }
   const locationNode = Pallet(
