@@ -1,6 +1,9 @@
 import Title from '../components/Title';
 import Pallet from '../components/Pallet';
 import focusBand from '../assets/img/focusBand.png';
+import tinyMushroom from '../assets/img/tinyMushroom.png';
+import appetizer1 from '../assets/img/appetizer1.png';
+import appetizer2 from '../assets/img/appetizer2.png';
 import medal1 from '../assets/img/medal1.png';
 import medal2 from '../assets/img/medal2.png';
 import medal3 from '../assets/img/medal3.png';
@@ -34,7 +37,7 @@ export default function Home() {
     focusBand,
     'n',
     createComBodyNode(
-      'At PokéBités Café, we take great pride in providing our customers with an exceptional dining experience, and it all begins with our unwavering commitment to using only the highest quality ingredients in every dish we prepare. We believe that using the freshest and finest ingredients is the cornerstone of creating delicious and memorable meals that leave a lasting impression on our guests.',
+      'At PokéBités Café, we take great pride in providing our customers with an exceptional dining experience, and it all begins with our unwavering commitment to using only the highest quality ingredients in every dish we prepare. We believe that using the freshest and finest ingredients is the cornerstone of creating delicious and memorable meals that leave a lasting impression on our guests. Our commitment has earned us several prestigious awards.',
       [medal1, medal2, medal3],
     ),
     'commit',
@@ -63,8 +66,30 @@ export default function Home() {
     return mealNode;
   }
 
+  // Amuse-bouche
+  const appeNode = Pallet(
+    'Amuse-bouche',
+    tinyMushroom,
+    'background-isometric',
+    createMealBodyNode(
+      [
+        {
+          imSrc: appetizer1, mealName: 'Test1', description: 'Haha', price: 100,
+        },
+        {
+          imSrc: appetizer2, mealName: 'Test1', description: 'Haha', price: 100,
+        },
+      ],
+      'appetizer',
+    ),
+    'commit',
+  );
+
+  // Plat Principal
+  // Dessert
+
   // Append elements
-  menuWrapper.append(...[titleNode, comNode]);
+  menuWrapper.append(...[titleNode, comNode, appeNode]);
 
   return menuWrapper;
 }
