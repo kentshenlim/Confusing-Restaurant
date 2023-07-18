@@ -16,6 +16,9 @@ export default function Home() {
   const homeWrapper = document.createElement('div');
   homeWrapper.classList.add('page', 'home-wrapper', 'flex-vertical');
 
+  // Title
+  const titleNode = Title('PokéBités Café');
+
   // About
   function createAboutBodyNode(imgSrc, aboutText) {
     const aboutWrapper = document.createElement('div');
@@ -37,9 +40,6 @@ export default function Home() {
     ),
     'about',
   );
-
-  // Title
-  const titleNode = Title('PokéBités Café');
 
   // Hours
   const hourData = {
@@ -85,7 +85,10 @@ export default function Home() {
     'Location',
     safariBall,
     'background-isometric',
-    createLocationBodyNode('Mirage Island (near Sky Pillar), Route 130, Hoenn', locationRestaurant),
+    createLocationBodyNode(
+      'Mirage Island (near Sky Pillar), Route 130, Hoenn',
+      locationRestaurant,
+    ),
     'location',
   );
 
@@ -94,12 +97,14 @@ export default function Home() {
     {
       name: 'Steven Stone, League Champion',
       imgSrc: stevenStone,
-      reviewText: "When I first heard about a restaurant located on a mirage island, I couldn't help but be intrigued. Skepticism mixed with curiosity as I set foot on this mystical oasis, unsure of what to expect. But from the moment I stepped inside, my doubts were shattered, and I was transported into a world of culinary delight.",
+      reviewText:
+        "When I first heard about a restaurant located on a mirage island, I couldn't help but be intrigued. Skepticism mixed with curiosity as I set foot on this mystical oasis, unsure of what to expect. But from the moment I stepped inside, my doubts were shattered, and I was transported into a world of culinary delight.",
     },
     {
       name: 'May Birch, Professional Trainer',
       imgSrc: mayBirch,
-      reviewText: "While dining at Mirage Island comes with a premium price tag, it is worth every penny. This is not just a restaurant; it is an escape from reality, an immersive journey for your taste buds and soul. Whether you're seeking a romantic dinner under the stars or a unique culinary adventure, Mirage Island delivers beyond expectations.",
+      reviewText:
+        "While dining at Mirage Island comes with a premium price tag, it is worth every penny. This is not just a restaurant; it is an escape from reality, an immersive journey for your taste buds and soul. Whether you're seeking a romantic dinner under the stars or a unique culinary adventure, Mirage Island delivers beyond expectations.",
     },
   ];
   function createReviewBodyNode(arr) {
@@ -120,7 +125,9 @@ export default function Home() {
   );
 
   // Append elements
-  homeWrapper.append(...[titleNode, aboutNode, hourNode, locationNode, reviewNode]);
+  homeWrapper.append(
+    ...[titleNode, aboutNode, hourNode, locationNode, reviewNode],
+  );
 
   return homeWrapper;
 }

@@ -1,4 +1,4 @@
-export default function createPallet(
+export default function Pallet(
   palletTitle,
   titleBall,
   titleBackgroundClass,

@@ -63,7 +63,7 @@ img.shake:hover {
   font-family: pangolin;
   font-size: 2rem;
   letter-spacing: 0.2rem;
-  color: #858383fd;
+  color: #554e4efd;
 }
 
 .title-wrapper::before,
@@ -225,4 +225,30 @@ img.shake:hover {
   box-shadow: 0px 0px 30px rgb(61, 123, 128);
   width: 80%;
   margin: 0 auto;
+}
+
+/* Pages: Menu ---------------------------------------------------------------*/
+.menu-wrapper .commit {
+  align-items: center;
+}
+
+.menu-wrapper > :not(:first-child) > :nth-child(2) {
+  width: 90%;
+}
+
+.menu-wrapper .commit > div:nth-child(2) > div {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-wrapper .commit > div img {
+  flex-shrink: 1;
+  width: 30%;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.menu-wrapper .commit > div img:hover {
+  transform: scale(1.1);
 }
