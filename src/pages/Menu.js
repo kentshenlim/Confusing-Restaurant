@@ -40,6 +40,29 @@ export default function Home() {
     'commit',
   );
 
+  // Meal selection
+  function createMealBodyNode(arrChoices, mealClass) {
+    const mealNode = document.createElement('div');
+    mealNode.classList.add('meal-selection', mealClass);
+    arrChoices.forEach((obj) => {
+      const {
+        imSrc, mealName, description, price,
+      } = obj;
+      const choiceWrapper = document.createElement('div');
+      const imNode = document.createElement('img');
+      imNode.src = imSrc;
+      const nameNode = document.createElement('h3');
+      nameNode.textContent = mealName;
+      const desNode = document.createElement('p');
+      desNode.textContent = description;
+      const priceNode = document.createElement('p');
+      priceNode.textContent = price;
+      choiceWrapper.append(...[imNode, nameNode, desNode, priceNode]);
+      mealNode.appendChild(choiceWrapper);
+    });
+    return mealNode;
+  }
+
   // Append elements
   menuWrapper.append(...[titleNode, comNode]);
 
