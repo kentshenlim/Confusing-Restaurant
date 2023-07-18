@@ -30,7 +30,7 @@ export default function Home() {
   const aboutNode = Pallet(
     'About',
     guide,
-    's',
+    'n',
     createAboutBodyNode(
       aboutRestaurant,
       'At Mirage Island, we invite you to embark on a journey like no other, where the boundaries between fantasy and reality blur, and your senses are awakened to a world of culinary enchantment. Nestled on a mirage island, a hidden oasis seemingly born from the dreams of wanderers, our restaurant is a testament to the magic that can unfold when imagination meets exquisite cuisine.',
