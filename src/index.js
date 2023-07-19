@@ -19,6 +19,7 @@ import './scrollbar.css';
     const insetNode = hash[hashKey];
     body.removeChild(body.lastChild);
     body.appendChild(insetNode);
+    window.scroll(0, 0); // Scroll to top when btn clicked
   }
 
   const tabSwitcher = document.createElement('nav');
