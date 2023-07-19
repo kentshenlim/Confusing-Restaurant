@@ -2,11 +2,17 @@ import Title from '../components/Title';
 import Pallet from '../components/Pallet';
 import focusBand from '../assets/img/focusBand.png';
 import tinyMushroom from '../assets/img/tinyMushroom.png';
-import appetizer1 from '../assets/img/appetizer1.png';
-import appetizer2 from '../assets/img/appetizer2.png';
+import bigMushroom from '../assets/img/bigMushroom.png';
+import rareCandy from '../assets/img/rareCandy.png';
 import medal1 from '../assets/img/medal1.png';
 import medal2 from '../assets/img/medal2.png';
 import medal3 from '../assets/img/medal3.png';
+import appetizer1 from '../assets/img/appetizer1.png';
+import appetizer2 from '../assets/img/appetizer2.png';
+import main1 from '../assets/img/main1.png';
+import main2 from '../assets/img/main2.png';
+import dessert1 from '../assets/img/dessert1.png';
+import dessert2 from '../assets/img/dessert2.png';
 
 export default function Home() {
   // Menu wrapper
@@ -98,22 +104,23 @@ export default function Home() {
   // Plat Principal
   const mainNode = Pallet(
     'Plat Principal',
-    tinyMushroom,
-    'background-isometric',
+    bigMushroom,
+    'background-zigzag',
     createMealBodyNode(
       [
         {
-          imSrc: appetizer1,
-          mealName: 'Citrus Delight Platter',
+          imSrc: main1,
+          mealName: 'Mirage Island Beef Stew',
           description:
-             "A refreshing appetizer that captures the essence of the bountiful Mirage Island. This delectable dish is an ode to the island's unique blend of flavors, combining zesty lemons, delightful candies, and succulent berries.",
-          price: ' ₽ 150',
+            'This soul-warming creation is a tribute to the rich, diverse flavors of the Pokémon world and the heartwarming hospitality found on Mirage Island. At the heart of this savory masterpiece lies tender, succulent beef, slow-cooked to perfection. Complementing the savory notes are an assortment of fresh vegetables, locally sourced from the abundant fields of Mirage Island.',
+          price: 650,
         },
         {
-          imSrc: appetizer2,
-          mealName: 'Test1',
-          description: 'Haha',
-          price: 100,
+          imSrc: main2,
+          mealName: 'Enchanted Isle Carbonara',
+          description:
+            'A fusion of traditional Italian flavors and the enchanting allure of Mirage Island, this pasta delight promises a memorable dining experience like no other. Nestled in a bed of perfectly al dente spaghetti, this dish boasts a luxurious creamy sauce that envelops every strand with velvety goodness. To elevate the experience further, the Pokémon Carbonara Spaghetti is adorned with a sprinkle of crisp and savory bacon bits.',
+          price: 550,
         },
       ],
       'main',
@@ -123,23 +130,24 @@ export default function Home() {
 
   // Dessert
   const dessNode = Pallet(
-    'Plat Principal',
-    tinyMushroom,
-    'background-isometric',
+    'Dessert',
+    rareCandy,
+    'background-rectangle',
     createMealBodyNode(
       [
         {
-          imSrc: appetizer1,
-          mealName: 'Citrus Delight Platter',
+          imSrc: dessert1,
+          mealName: 'Magical Lantern Fantasy',
           description:
-              "A refreshing appetizer that captures the essence of the bountiful Mirage Island. This delectable dish is an ode to the island's unique blend of flavors, combining zesty lemons, delightful candies, and succulent berries.",
-          price: ' ₽ 150',
+            "Behold a delightful spectacle of a pink-brown chocolate ice cream cookie, skillfully crafted to resemble the enchanting lanterns that illuminate the island's starry nights. Perched atop this dreamy creation is an edible lantern doll, a testament to the culinary artistry that brings this fantasy to life.",
+          price: 275,
         },
         {
-          imSrc: appetizer2,
-          mealName: 'Test1',
-          description: 'Haha',
-          price: 100,
+          imSrc: dessert2,
+          mealName: 'Berry Bliss Tiramisu',
+          description:
+            "This delectable treat artfully combines the rich heritage of Italian Tiramisu with the vibrancy of Mirage Island's ripest strawberries. Each heavenly spoonful unveils layers of creamy mascarpone cheese elegantly intertwined with delicate ladyfinger biscuits, expertly soaked in a symphony of espresso and a hint of amaretto.",
+          price: 200,
         },
       ],
       'dessert',
