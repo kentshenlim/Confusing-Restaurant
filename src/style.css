@@ -204,13 +204,13 @@ img.shake:hover {
   z-index: 1;
 }
 
+.page > :not(:first-child) > :nth-child(2) {
+  width: 90%;
+}
+
 /* Pages: Home ---------------------------------------------------------------*/
 .home-wrapper .about {
   align-items: center;
-}
-
-.home-wrapper > :not(:first-child) > :nth-child(2) {
-  width: 90%;
 }
 
 .home-wrapper .about > :nth-child(2) > img {
@@ -232,10 +232,6 @@ img.shake:hover {
 /* Pages: Menu ---------------------------------------------------------------*/
 .menu-wrapper .commit {
   align-items: center;
-}
-
-.menu-wrapper > :not(:first-child) > :nth-child(2) {
-  width: 90%;
 }
 
 .menu-wrapper .commit > div:nth-child(2) > div {
