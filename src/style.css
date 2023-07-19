@@ -264,6 +264,9 @@ img.shake:hover {
 .choice-wrapper {
   align-items: center;
   padding-top: 1rem;
+}
+
+.choice-wrapper:not(:last-child) {
   border-bottom: solid #b4a5a567 3px;
 }
 
@@ -271,4 +274,8 @@ img.shake:hover {
   width: 60%;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 30px rgb(61, 123, 128);
+}
+
+.pokemon-dollar::before {
+  content: '₽ ';
 }

@@ -60,6 +60,7 @@ export default function Home() {
       const desNode = document.createElement('p');
       desNode.textContent = description;
       const priceNode = document.createElement('p');
+      priceNode.classList.add('pokemon-dollar');
       priceNode.textContent = price;
       choiceWrapper.append(...[imNode, nameNode, desNode, priceNode]);
       mealNode.appendChild(choiceWrapper);
@@ -79,13 +80,14 @@ export default function Home() {
           mealName: 'Citrus Delight Platter',
           description:
             "A refreshing appetizer that captures the essence of the bountiful Mirage Island. This delectable dish is an ode to the island's unique blend of flavors, combining zesty lemons, delightful candies, and succulent berries.",
-          price: ' ₽ 150',
+          price: 150,
         },
         {
           imSrc: appetizer2,
-          mealName: 'Test1',
-          description: 'Haha',
-          price: 100,
+          mealName: "Pikachu's Pancake Medley",
+          description:
+            "A whimsical creation inspired by the playful spirit of everyone's favorite Electric-type Pokémon, this dish is a true celebration of flavors and artistry. The pancakes are lovingly paired with a variety of luscious fruits that pay homage to the lush vegetation found on Mirage Island.",
+          price: 225,
         },
       ],
       'appetizer',
