@@ -13,13 +13,19 @@ import './scrollbar.css';
     menu: menuNode,
     contact: contactNode,
   };
+  let current = 'home';
 
   function handleClick(event) {
     const hashKey = event.target.getAttribute('data-direct');
+    if (current === hashKey) {
+      window.scroll({ top: 0, behavior: 'smooth' }); // Scroll to top when btn clicked
+      return;
+    }
     const insetNode = hash[hashKey];
     body.removeChild(body.lastChild);
     body.appendChild(insetNode);
-    window.scroll(0, 0); // Scroll to top when btn clicked
+    window.scroll({ top: 0 }); // Scroll to top when btn clicked
+    current = hashKey;
   }
 
   const tabSwitcher = document.createElement('nav');
