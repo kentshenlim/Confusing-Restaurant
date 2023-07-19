@@ -244,13 +244,31 @@ img.shake:hover {
   justify-content: space-around;
 }
 
-.menu-wrapper .commit > div img {
+.menu-wrapper .commit > div:not(:first-child) img {
   flex-shrink: 1;
   width: 30%;
   cursor: pointer;
   transition: all ease-in-out 0.1s;
+  box-shadow: 0px 0px 30px rgb(61, 123, 128);
 }
 
 .menu-wrapper .commit > div img:hover {
   transform: scale(1.1);
+}
+
+.meal-selection {
+  align-items: center;
+  text-align: center;
+}
+
+.choice-wrapper {
+  align-items: center;
+  padding-top: 1rem;
+  border-bottom: solid #b4a5a567 3px;
+}
+
+.meal-selection img {
+  width: 60%;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 30px rgb(61, 123, 128);
 }

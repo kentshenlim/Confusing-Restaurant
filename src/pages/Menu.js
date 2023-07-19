@@ -46,12 +46,13 @@ export default function Home() {
   // Meal selection
   function createMealBodyNode(arrChoices, mealClass) {
     const mealNode = document.createElement('div');
-    mealNode.classList.add('meal-selection', mealClass);
+    mealNode.classList.add('meal-selection', mealClass, 'flex-vertical');
     arrChoices.forEach((obj) => {
       const {
         imSrc, mealName, description, price,
       } = obj;
       const choiceWrapper = document.createElement('div');
+      choiceWrapper.classList.add('flex-vertical', 'choice-wrapper');
       const imNode = document.createElement('img');
       imNode.src = imSrc;
       const nameNode = document.createElement('h3');
@@ -74,22 +75,78 @@ export default function Home() {
     createMealBodyNode(
       [
         {
-          imSrc: appetizer1, mealName: 'Test1', description: 'Haha', price: 100,
+          imSrc: appetizer1,
+          mealName: 'Citrus Delight Platter',
+          description:
+            "A refreshing appetizer that captures the essence of the bountiful Mirage Island. This delectable dish is an ode to the island's unique blend of flavors, combining zesty lemons, delightful candies, and succulent berries.",
+          price: ' ₽ 150',
         },
         {
-          imSrc: appetizer2, mealName: 'Test1', description: 'Haha', price: 100,
+          imSrc: appetizer2,
+          mealName: 'Test1',
+          description: 'Haha',
+          price: 100,
         },
       ],
       'appetizer',
     ),
-    'commit',
+    'appetizer',
   );
 
   // Plat Principal
+  const mainNode = Pallet(
+    'Plat Principal',
+    tinyMushroom,
+    'background-isometric',
+    createMealBodyNode(
+      [
+        {
+          imSrc: appetizer1,
+          mealName: 'Citrus Delight Platter',
+          description:
+             "A refreshing appetizer that captures the essence of the bountiful Mirage Island. This delectable dish is an ode to the island's unique blend of flavors, combining zesty lemons, delightful candies, and succulent berries.",
+          price: ' ₽ 150',
+        },
+        {
+          imSrc: appetizer2,
+          mealName: 'Test1',
+          description: 'Haha',
+          price: 100,
+        },
+      ],
+      'main',
+    ),
+    'main',
+  );
+
   // Dessert
+  const dessNode = Pallet(
+    'Plat Principal',
+    tinyMushroom,
+    'background-isometric',
+    createMealBodyNode(
+      [
+        {
+          imSrc: appetizer1,
+          mealName: 'Citrus Delight Platter',
+          description:
+              "A refreshing appetizer that captures the essence of the bountiful Mirage Island. This delectable dish is an ode to the island's unique blend of flavors, combining zesty lemons, delightful candies, and succulent berries.",
+          price: ' ₽ 150',
+        },
+        {
+          imSrc: appetizer2,
+          mealName: 'Test1',
+          description: 'Haha',
+          price: 100,
+        },
+      ],
+      'dessert',
+    ),
+    'dessert',
+  );
 
   // Append elements
-  menuWrapper.append(...[titleNode, comNode, appeNode]);
+  menuWrapper.append(...[titleNode, comNode, appeNode, mainNode, dessNode]);
 
   return menuWrapper;
 }
