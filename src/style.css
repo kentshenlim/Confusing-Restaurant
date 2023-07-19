@@ -63,7 +63,9 @@ img.shake:hover {
   font-family: pangolin;
   font-size: 2rem;
   letter-spacing: 0.2rem;
-  color: #554e4efd;
+  /* color: #554e4efd; */
+  color: transparent;
+  -webkit-text-stroke: 1px black;
 }
 
 .title-wrapper::before,

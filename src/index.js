@@ -6,4 +6,4 @@ import './scrollbar.css';
 
 const body = document.querySelector('body');
 
-body.append(Menu());
+body.append(Home());
