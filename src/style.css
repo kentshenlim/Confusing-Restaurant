@@ -275,3 +275,24 @@ img.shake:hover {
 .pokemon-dollar::before {
   content: '₽ ';
 }
+
+/* Pages: Contact ------------------------------------------------------------*/
+.worker-pallet {
+  justify-content: space-around;
+}
+.worker-pallet > :first-child {
+  width: 40%;
+}
+
+.worker-pallet > :nth-child(2) {
+  width: 55%;
+}
+
+.worker-pallet > :nth-child(2) > * {
+  margin: 0;
+}
+
+.worker-pallet address::before {
+  content: 'PokéNav: ';
+  font-style: normal;
+}
