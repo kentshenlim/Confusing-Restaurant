@@ -5,6 +5,7 @@
 - [Demo](https://kentshenlim.github.io/Confusing-Restaurant/)
 - Hands-on learning experience focused on practicing and mastering Webpack, a
   powerful module bundler for modern web development.
+- Vanilla JavaScript
 - `dist` directory ready for deployment
 
 ## Credits
