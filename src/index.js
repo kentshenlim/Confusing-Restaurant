@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import './style.css';
 import './background.css';
 import './scrollbar.css';
+import './style-media.css';
 
 (() => {
   const body = document.querySelector('body');

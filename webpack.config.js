@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: false, // index.html in dist not built from webpack
   },
   module: {
     rules: [

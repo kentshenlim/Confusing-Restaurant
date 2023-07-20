@@ -1,0 +1,91 @@
+@media only screen and (max-width: 1000px) {
+  .page {
+    width: 80% !important;
+    min-width: 300px !important;
+  }
+  .title-wrapper {
+    font-size: 1.5rem !important;
+  }
+  .title-wrapper {
+    width: 95% !important;
+  }
+  .pallet-wrapper {
+    width: 90% !important;
+  }
+
+  .pallet-wrapper > :first-child > h2 {
+    font-size: 1.5rem !important;
+  }
+  .pallet-wrapper > div > h2 {
+    padding: 0.5rem !important;
+  }
+  nav {
+    width: 80% !important;
+    min-width: 300px !important;
+  }
+  .pallet-wrapper > *:first-child {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .title-wrapper {
+    font-size: 1rem !important;
+  }
+  .day-wrapper > h3 {
+    font-size: 0.8rem !important;
+  }
+  .day-wrapper > p {
+    font-size: 0.8rem !important;
+  }
+  .review-wrapper,
+  .worker-pallet {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .review-wrapper > *,
+  .worker-pallet > * {
+    width: 100% !important;
+    align-items: center !important;
+  }
+  .review-wrapper img,
+  .worker-pallet img {
+    max-width: 200px !important;
+    margin-bottom: 1rem !important;
+  }
+  .location > :nth-child(2) {
+    margin-top: 0.25rem !important;
+  }
+  h3 {
+    margin-top: 0.25rem !important;
+  }
+  .pallet-wrapper > :nth-child(2) h3,
+  .pallet-wrapper > :nth-child(2) blockquote,
+  .pallet-wrapper > :nth-child(2) p,
+  .pallet-wrapper > :nth-child(2) address {
+    font-size: 1.1rem !important;
+  }
+  .hours > div:nth-child(2) > div {
+    min-width: 60px;
+  }
+  .hours > div:nth-child(2) {
+    gap: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .review-wrapper img,
+  .worker-pallet img {
+    max-width: 150px !important;
+    margin-bottom: 1rem !important;
+  }
+  .pallet-wrapper > :first-child {
+    height: 2.5rem !important;
+  }
+  .pallet-wrapper > :nth-child(2) h3,
+  .pallet-wrapper > :nth-child(2) blockquote,
+  .pallet-wrapper > :nth-child(2) p,
+  .pallet-wrapper > :nth-child(2) address {
+    font-size: 1rem !important;
+  }
+}
