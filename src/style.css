@@ -12,10 +12,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --BLUE-BOX-SHADOW-COLOR: rgb(61, 123, 128);
-}
-
 #root {
   width: 100vw;
 }
@@ -24,6 +20,47 @@ body {
   background-image: url(../src/assets/img/backgroundP2.png);
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --BLUE-BOX-SHADOW-COLOR: rgb(61, 123, 128);
+}
+
+@media only screen and (max-width: 1000px) {
+  .page {
+    width: 80% !important;
+    min-width: 425px !important;
+  }
+  .title-wrapper {
+    color: red !important;
+    font-size: 1.5rem !important;
+  }
+  .title-wrapper {
+    width: 95% !important;
+  }
+  .pallet-wrapper {
+    width: 90% !important;
+  }
+  nav {
+    width: 50% !important;
+    min-width: 400px !important;
+  }
+  .pallet-wrapper > *:first-child,
+  h2 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .title-wrapper {
+    font-size: 1rem !important;
+  }
+  .day-wrapper > h3 {
+    font-size: 1.2rem !important;
+  }
+  .day-wrapper > p {
+    font-size: 1rem !important;
+  }
 }
 
 /* Predefined class ----------------------------------------------------------*/
