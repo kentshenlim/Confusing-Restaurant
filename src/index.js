@@ -15,6 +15,20 @@ import './scrollbar.css';
   };
   let current = 'home';
 
+  const tabSwitcher = document.createElement('nav');
+  tabSwitcher.classList.add('flex-horizontal');
+  const homeBtn = document.createElement('button');
+  homeBtn.setAttribute('data-direct', 'home');
+  homeBtn.classList.add('active');
+  homeBtn.textContent = 'Home';
+  const menuBtn = document.createElement('button');
+  menuBtn.setAttribute('data-direct', 'menu');
+  menuBtn.textContent = 'Menu';
+  const contactBtn = document.createElement('button');
+  contactBtn.setAttribute('data-direct', 'contact');
+  contactBtn.textContent = 'Contact';
+  const btns = [homeBtn, menuBtn, contactBtn];
+
   function handleClick(event) {
     const hashKey = event.target.getAttribute('data-direct');
     if (current === hashKey) {
@@ -25,21 +39,13 @@ import './scrollbar.css';
     body.removeChild(body.lastChild);
     body.appendChild(insetNode);
     window.scroll({ top: 0 }); // Scroll to top when btn clicked
+    btns.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
     current = hashKey;
   }
 
-  const tabSwitcher = document.createElement('nav');
-  tabSwitcher.classList.add('flex-horizontal');
-  const homeBtn = document.createElement('button');
-  homeBtn.setAttribute('data-direct', 'home');
-  homeBtn.textContent = 'Home';
-  const menuBtn = document.createElement('button');
-  menuBtn.setAttribute('data-direct', 'menu');
-  menuBtn.textContent = 'Menu';
-  const contactBtn = document.createElement('button');
-  contactBtn.setAttribute('data-direct', 'contact');
-  contactBtn.textContent = 'Contact';
-  const btns = [homeBtn, menuBtn, contactBtn];
   btns.forEach((btn) => {
     const store = btn;
     store.onclick = handleClick;
